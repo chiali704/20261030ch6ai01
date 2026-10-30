@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全端工程師 | 個人履歷 Portfolio</title>
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* 前衛科技感核心配色與樣式 */
+        :root {
+            --dark-bg: #0a0f1d;
+            --card-bg: #111a33;
+            --neon-blue: #00f0ff;
+            --neon-purple: #bd00ff;
+            --neon-green: #39ff14;
+            --text-muted: #8fa0dd;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 科技感螢光線條與陰影效果 */
+        .neon-border {
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .neon-border:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .text-neon-blue { color: var(--neon-blue); text-shadow: 0 0 8px rgba(0, 240, 255, 0.5); }
+        .text-neon-purple { color: var(--neon-purple); text-shadow: 0 0 8px rgba(189, 0, 255, 0.5); }
+        .text-neon-green { color: var(--neon-green); text-shadow: 0 0 8px rgba(57, 255, 20, 0.5); }
+
+        /* 按鈕自訂樣式 */
+        .btn-cyber {
+            background: linear-gradient(45deg, var(--neon-purple), var(--neon-blue));
+            color: #fff;
+            border: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 10px 24px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+        }
+
+        .btn-cyber:hover {
+            color: #fff;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            box-shadow: 0 0 25px rgba(189, 0, 255, 0.8);
+            transform: scale(1.05);
+        }
+
+        /* 技能標籤 */
+        .tech-badge {
+            background-color: rgba(0, 240, 255, 0.1);
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin: 4px;
+            display: inline-block;
+        }
+
+        /* 時間軸線條 */
+        .timeline-container {
+            border-left: 2px solid rgba(189, 0, 255, 0.3);
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -27px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--neon-purple);
+            box-shadow: 0 0 10px var(--neon-purple);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container py-5">
+        <!-- HEADER / 頂部數位宣告 -->
+        <header class="text-center mb-5 pb-4 border-bottom border-secondary">
+            <h1 class="display-3 fw-bold tracking-in-expand">
+                <span class="text-neon-blue">ALEX</span> LIN
+            </h1>
+            <p class="lead text-uppercase tracking-widest text-neon-green fw-semibold">
+                &lt; Full-Stack Engineer / 全端工程師 &gt;
+            </p>
+            <div class="d-flex justify-content-center gap-3 fs-4 mt-3">
+                <a href="#" class="text-white hover-neon"><i class="bi bi-github"></i></a>
+                <a href="#" class="text-white hover-neon"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:your_email@example.com" class="text-white hover-neon"><i class="bi bi-envelope"></i></a>
+            </div>
+        </header>
+
+        <!-- SECTION 1: 個人簡介 -->
+        <section class="mb-5">
+            <div class="p-4 p-md-5 rounded-4 neon-border" style="background-color: var(--card-bg);">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="h3 mb-4 text-neon-blue"><i class="bi bi-terminal-fill me-2"></i>個人簡介 // PROFILE</h2>
+                        <p class="lead" style="color: #e2e8f0; line-height: 1.8;">
+                            熱衷於將複雜的核心邏輯轉化為直覺且高效的數位體驗。擁有豐富的後端架構設計與前端敏捷開發經驗，專注於打造高併發、低延遲的 Web 應用程式。喜愛探索新技術，具備優秀的跨團隊溝通能力與問題解決思維。
+                        </p>
+                        <div class="mt-4">
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">React.js</span>
+                            <span class="tech-badge">Vue3</span>
+                            <span class="tech-badge">Python / Django</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">Kubernetes</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">AWS</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                        <div class="p-3 border border-secondary rounded d-inline-block bg-dark">
+                            <div class="fs-6 text-start text-neon-green mb-1"><i class="bi bi-circle-fill text-danger me-1"></i> SYSTEM STATUS</div>
+                            <div class="text-start font-monospace text-muted small">
+                                OS: Ubuntu 22.04 LTS<br>
+                                STATUS: OPEN FOR OFFERS<br>
+                                LOC: TAIPEI, TW<br>
+                                PING: 12ms (STABLE)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: 工作經驗 -->
+        <section class="mb-5">
+            <div class="p-4 p-md-5 rounded-4 neon-border" style="background-color: var(--card-bg);">
+                <h2 class="h3 mb-4 text-neon-purple"><i class="bi bi-cpu-fill me-2"></i>工作經驗 // EXPERIENCE</h2>
+                
+                <div class="timeline-container ms-2">
+                    <!-- 職缺 1 -->
+                    <div class="timeline-item position-relative mb-5">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h4 class="h5 text-white mb-1">高級全端工程師 <span class="text-neon-blue">@ 創新型科技軟體公司</span></h4>
+                            <span class="badge bg-secondary">2024 / 03 — 至今</span>
+                        </div>
+                        <ul class="text-muted ps-3" style="line-height: 1.7;">
+                            <li>主導電商平台微服務架構轉型，成功將系統可用性提升至 <span class="text-neon-green">99.95%</span>。</li>
+                            <li>使用 React 與 Tailwind CSS 重構前端核心模塊，並結合 Next.js 進行 SSR 優化，提升 40% 的首屏加載速度。</li>
+                            <li>設計高效能 RESTful API 與 GraphQL 介面，並使用 Redis 處理快取快取機制，降低資料庫負載 50%。</li>
+                        </ul>
+                    </div>
+
+                    <!-- 職缺 2 -->
+                    <div class="timeline-item position-relative mb-3">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                            <h4 class="h5 text-white mb-1">全端工程師 <span class="text-neon-blue">@ 數碼金融科技</span></h4>
+                            <span class="badge bg-secondary">2021 / 07 — 2024 / 02</span>
+                        </div>
+                        <ul class="text-muted ps-3" style="line-height: 1.7;">
+                            <li>負責內部資產管理系統開發，整合第三方支付閘道與區塊鏈 API 串接。</li>
+                            <li>建立自動化 CI/CD 流程（GitHub Actions + Docker），縮短產品部署週期達 60%。</li>
+                            <li>維護並優化 PostgreSQL 資料庫，編寫高效能 SQL 語法及進行 Index 調校。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: 學習歷程與作品連結 -->
+        <section class="mb-5">
+            <div class="p-4 p-md-5 rounded-4 neon-border" style="background-color: var(--card-bg);">
+                <h2 class="h3 mb-4 text-neon-green"><i class="bi bi-mortarboard-fill me-2"></i>學習歷程 // EDUCATION & PROJECTS</h2>
+                
+                <div class="row g-4">
+                    <!-- 教育背景 -->
+                    <div class="col-md-6">
+                        <div class="p-4 rounded bg-dark bg-opacity-50 h-100 border border-secondary">
+                            <h5 class="text-white mb-3"><i class="bi bi-shield-check text-neon-blue me-2"></i>學歷背景</h5>
+                            <p class="mb-1 fw-bold text-white">國立科技大學 — 資訊工程學系</p>
+                            <p class="text-muted small mb-3">學士學位 | 2017 — 2021</p>
+                            <p class="text-muted">在校期間專注於演算法、資料結構與網頁技術研究，並於畢業專題中獲得最佳優等獎。</p>
+                        </div>
+                    </div>
+
+                    <!-- 自我提升與認證 -->
+                    <div class="col-md-6">
+                        <div class="p-4 rounded bg-dark bg-opacity-50 h-100 border border-secondary">
+                            <h5 class="text-white mb-3"><i class="bi bi-patch-check text-neon-purple me-2"></i>專業認證 / 進修</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>AWS Certified Solutions Architect – Associate</li>
+                                <li>Google Cloud Certified Professional Cloud Architect</li>
+                                <li>Udemy 全端開發大師班 120 小時深度結業</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 作品展示區（含按鈕跳轉） -->
+                    <div class="col-12 mt-4">
+                        <div class="p-4 rounded bg-dark bg-opacity-25 border border-secondary text-center">
+                            <h5 class="text-white mb-3">個人核心專案實績展示</h5>
+                            <p class="text-muted mx-auto" style="max-width: 700px;">
+                                我將近年來的全端開源專案、微服務實驗模型、前端現代化元件庫彙整於雲端作品集。點擊下方按鈕即可跳轉，您可以自由在代碼中自行設定目標 URL 路徑。
+                            </p>
+                            <div class="mt-4">
+                                <a href="https://github.com/yourusername" target="_blank" class="btn btn-cyber py-3 px-5 fs-5">
+                                    <i class="bi bi-rocket-takeoff-fill me-2"></i>進入我的作品集網站 // VIEW PORTFOLIO
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-muted small mt-5 pt-4 border-top border-secondary">
+            <p>© 2026 ALEX LIN. ALL RIGHTS RESERVED. POWERED BY BOOTSTRAP 5.</p>
+        </footer>
+    </div>
+
+    <!-- 引入 Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PINK PAWS | 貓咪精品館</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <style>
+        /* 全站基本設定 */
+        body {
+            background-color: #fff5f8;
+            font-family: "Microsoft JhengHei", sans-serif;
+            color: #684451;
+        }
+
+        :root {
+            --pink01: #fff0f4;
+            --pink02: #fbd5e0;
+            --pink03: #ed9db5;
+            --pink04: #d96c91;
+            --pink05: #a94368;
+            --gold: #c6a16b;
+        }
+
+        /* 主要區塊 */
+        .box01 {
+            height: 160px;
+            font-size: 58px;
+            font-weight: 900;
+            text-align: center;
+            line-height: 160px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #fbd5e0, #ed9db5);
+            border-radius: 18px;
+            padding: 25px;
+            color: #78394f;
+            height: auto;
+            line-height: normal;
+        }
+
+        .logo {
+            font-size: 35px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .slogan {
+            font-size: 13px;
+            letter-spacing: 4px;
+            margin-top: 5px;
+        }
+
+        .nav-link {
+            color: #78394f !important;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+        }
+
+        .cart-btn {
+            background-color: #fff5f8;
+            color: #b44d73;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 22px;
+            font-weight: bold;
+        }
+
+        /* 標題 */
+        .section-title {
+            text-align: center;
+            margin: 45px 0 10px;
+            color: #a94368;
+            font-size: 27px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #bd8296;
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        /* 商品卡片 */
+        .product-card {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(169, 67, 104, 0.10);
+            transition: 0.3s;
+            height: 100%;
+            border: 1px solid #fce1e9;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(169, 67, 104, 0.18);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 17px;
+            font-weight: bold;
+            color: #87465d;
+        }
+
+        .product-desc {
+            color: #b58b9a;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+
+        .price {
+            color: #d96c91;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .buy-btn {
+            background-color: #e995ae;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 8px 25px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #b44d73;
+            color: white;
+        }
+
+        .tag {
+            background-color: #fff0f4;
+            color: #d96c91;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 11px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        /* 品牌特色 */
+        .feature-card {
+            background-color: #fff;
+            border: 1px solid #f8dce5;
+            border-radius: 15px;
+            text-align: center;
+            padding: 25px 10px;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            background-color: #fff0f4;
+        }
+
+        .feature-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .feature-title {
+            color: #a94368;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .feature-text {
+            font-size: 12px;
+            color: #b58b9a;
+            margin-top: 8px;
+        }
+
+        /* 優惠區 */
+        .sale-box {
+            background: linear-gradient(120deg, #f6c4d3, #e995ae);
+            color: white;
+            border-radius: 18px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .sale-title {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .sale-text {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #85465e;
+            color: #ffe9f0;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .footer-title {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .footer a {
+            color: #ffe9f0;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        /* 手機版調整 */
+        @media (max-width: 576px) {
+            .logo {
+                font-size: 27px;
+            }
+
+            .product-img {
+                height: 170px;
+            }
+
+            .section-title {
+                font-size: 23px;
+            }
+
+            .header {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header 品牌導覽列 -->
+        <div class="row">
+            <div class="col-12 mt-3">
+                <div class="header d-flex flex-wrap align-items-center justify-content-between">
+
+                    <div>
+                        <div class="logo">PINK <span>PAWS</span></div>
+                        <div class="slogan">LUXURY CAT COLLECTION</div>
+                    </div>
+
+                    <nav class="navbar navbar-expand-lg p-0">
+                        <div class="d-flex flex-wrap align-items-center justify-content-center">
+                            <a class="nav-link" href="#">首頁</a>
+                            <a class="nav-link" href="#products">精選商品</a>
+                            <a class="nav-link" href="#about">品牌理念</a>
+                            <a class="nav-link" href="#sale">會員優惠</a>
+                            <button class="cart-btn ms-2">♡ 購物車</button>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 商品區域 -->
+        <div class="row" id="products">
+
+            <div class="col-12">
+                <h2 class="section-title">OUR LOVELY CATS</h2>
+                <p class="section-subtitle">
+                    精選六款人氣貓咪・讓生活多一點幸福
+                </p>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="product-card">
+                    <img src="../../img/cat01.jpg" class="product-img" alt="貓咪01">
+                    <div class="product-info">
+                        <span class="tag">HOT SALE</span>
+                        <div class="product-name">優雅英國短毛貓</div>
+                        <div class="product-desc">溫柔沉穩，擁有療癒般的陪伴。</div>
+                        <div class="price">$28,000</div>
+                        <button class="buy-btn">了解更多</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="product-card">
+                    <img src="../../img/cat02.jpg" class="product-img" alt="貓咪02">
+                    <div class="product-info">
+                        <span class="tag">POPULAR</span>
+                        <div class="product-name">夢幻布偶貓</div>
+                        <div class="product-desc">藍色眼眸，擁有迷人的氣質。</div>
+                        <div class="price">$35,000</div>
+                        <button class="buy-btn">了解更多</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="product-card">
+                    <img src="../../img/cat03.jpg" class="product-img" alt="貓咪03">
+                    <div class="product-info">
+                        <span class="tag">NEW ARRIVAL</span>
+                        <div class="product-name">可愛曼赤肯</div>
+                        <div class="product-desc">短腿萌萌，活潑又親人的小夥伴。</div>
+                        <div class="price">$32,000</div>
+                        <button class="buy-btn">了解更多</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="product-card">
+                    <img src="../../img/cat04.jpg" class="product-img" alt="貓咪04">
+                    <div class="product-info">
+                        <span class="tag">RECOMMEND</span>
+                        <div class="product-name">高貴波斯貓</div>
+                        <div class="product-desc">華麗長毛，散發高雅迷人的氣息。</div>
+                        <div class="price">$30,000</div>
+                        <button class="buy-btn">了解更多</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="product-card">
+                    <img src="../../img/cat05.jpg" class="product-img" alt="貓咪05">
+                    <div class="product-info">
+                        <span class="tag">LIMITED</span>
+                        <div class="product-name">甜心橘貓</div>
+                        <div class="product-desc">陽光活潑，為每一天帶來歡樂。</div>
+                        <div class="price">$25,000</div>
+                        <button class="buy-btn">了解更多</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="product-card">
+                    <img src="../../img/cat06.jpg" class="product-img" alt="貓咪06">
+                    <div class="product-info">
+                        <span class="tag">BEST CHOICE</span>
+                        <div class="product-name">神秘黑貓</div>
+                        <div class="product-desc">獨特氣質，優雅又充滿個性。</div>
+                        <div class="price">$27,000</div>
+                        <button class="buy-btn">了解更多</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 品牌特色區 -->
+        <div class="row" id="about">
+
+            <div class="col-12">
+                <h2 class="section-title">WHY PINK PAWS</h2>
+                <p class="section-subtitle">
+                    我們用心對待每一個毛茸茸的小生命
+                </p>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mt-3">
+                <div class="feature-card">
+                    <div class="feature-icon">♡</div>
+                    <div class="feature-title">用心照護</div>
+                    <div class="feature-text">
+                        提供完善的生活環境與日常照顧。
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mt-3">
+                <div class="feature-card">
+                    <div class="feature-icon">✿</div>
+                    <div class="feature-title">健康把關</div>
+                    <div class="feature-text">
+                        重視健康檢查與完整健康紀錄。
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mt-3">
+                <div class="feature-card">
+                    <div class="feature-icon">♡</div>
+                    <div class="feature-title">專業諮詢</div>
+                    <div class="feature-text">
+                        提供新手飼主專業飼養建議。
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mt-3">
+                <div class="feature-card">
+                    <div class="feature-icon">✧</div>
+                    <div class="feature-title">售後服務</div>
+                    <div class="feature-text">
+                        陪伴飼主一起迎接幸福生活。
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 會員優惠區 -->
+        <div class="row" id="sale">
+
+            <div class="col-12 mt-4">
+                <div class="sale-box">
+                    <div class="sale-title">
+                        A LITTLE MORE LOVE ♡
+                    </div>
+                    <div class="sale-text">
+                        加入 PINK PAWS 會員，享有專屬購物優惠與新品資訊！
+                    </div>
+                    <button class="cart-btn mt-3">
+                        立即加入會員
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="row">
+            <div class="col-12 mt-3">
+                <div class="footer">
+
+                    <div class="footer-title">PINK PAWS</div>
+
+                    <p>
+                        A HOME FULL OF LOVE AND CATS.
+                    </p>
+
+                    <div>
+                        <a href="#">關於我們</a>
+                        <a href="#">商品資訊</a>
+                        <a href="#">購物須知</a>
+                        <a href="#">聯絡我們</a>
+                    </div>
+
+                    <hr style="border-color: #e9b8c9;">
+
+                    <p>
+                        客服專線：04-1234-5678<br>
+                        營業時間：週一至週日 10:00 - 21:00
+                    </p>
+
+                    <p>
+                        © 2026 PINK PAWS. ALL RIGHTS RESERVED.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

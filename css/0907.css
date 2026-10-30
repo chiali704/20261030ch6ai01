@@ -1,0 +1,232 @@
+body {
+    background-color: #ebb0a8;
+}
+
+.wrapper {
+    width: 1024px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px 2px var(--bg002);
+}
+
+.logo {
+    width: 1024px;
+    height: 120px;
+    background-color: var(--bg002);
+    background-image: url(../img/iceland.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+nav {
+    background-color: var(--nav001);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 15px;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+nav ul li {
+    float: left;
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--btn002);
+    background-color: var(--nav002);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+nav ul li a:hover {
+    box-shadow: 2px 2px 2px 2px var(--btn002);
+    border-radius: 15px;
+    background-color: var(--btn001);
+    color: var(--bg003);
+}
+
+.content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--bg002);
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--btn001);
+    margin-bottom: 25px;
+}
+
+.content .box {
+    width: 49%;
+    height: 250px;
+    background-image: url(../img/iceland3.jpg);
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    
+}
+
+.content .boxx {
+    width: 49%;
+    height: 250px;
+    background-image: url(../img/iceland4.jpg);
+    background-position: center center;
+    background-size: cover;
+    float: right;
+    
+}
+
+.content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: var(--text002);
+}
+
+.content a {
+    display: block;
+    background-color: var(--btn001);
+    width: 150px;
+    height: 40px;
+    color: var(--bg001);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.content a:hover {
+    box-shadow: 2px 2px 2px 2px var(--bg003);
+    background-color: var(--nav002);
+    color: var(--btn002);
+}
+
+.footer {
+    background-color: #df996b;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    color: #305969;
+    font-weight: bold;
+    font-size: medium;
+}
+
+/* RWD指令 */
+@media screen and (max-width:1024px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .logo {
+        width: 100%;
+        background-color: #eba56b;
+        height: 160px;
+        background-image: url(../img/iceland1.jpg);
+
+    }
+}
+
+@media screen and (max-width:768px) {
+    .logo {
+        background-color: #f8c578;
+        height: 100px;
+        background-image: url(../img/iceland2.jpg);
+    }
+
+    body {
+        background-color: #f3c2b7;
+    }
+
+    nav {
+        background-color: rgb(123, 182, 164);
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        float: none;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    nav ul li a {
+        display: block;
+        background-color: rgb(177, 219, 208);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    nav ul li a:hover {
+        background-color: #305969;
+        color: #b5f5e2;
+        box-shadow: 2px 2px 2px 2px #6878aa;
+    }
+
+    .content {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #24383f;
+    }
+
+    .content h1 {
+        font-size: 60px;
+    }
+
+    .content .box{
+        width: 100%;
+        height: 200px;
+        float: left;
+    }
+
+    .content .boxx {
+        width: 100%;
+        height: 200px;
+        float: right;
+    }
+
+    .content p {
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+
+    .content a {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .footer {
+        font-size: 15px;
+    }
+}
